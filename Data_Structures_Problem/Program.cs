@@ -8,9 +8,9 @@ namespace Data_Structures_Problem
         {
             Console.WriteLine(" Welcome To Data Structures Problem ");
             LinkedList linkedList = new LinkedList();
-            linkedList.AddNode(56);
-            linkedList.AddNode(30);
             linkedList.AddNode(70);
+            linkedList.AddNode(56);
+            linkedList.InsertElement(30, 2);
             Console.WriteLine("Linked List is: ");
             linkedList.Display();
         }

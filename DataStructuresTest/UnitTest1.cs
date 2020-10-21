@@ -26,5 +26,14 @@ namespace DataStructuresTest
             linkedList.ChangeNode(70);
             Assert.AreEqual(56, linkedList.head.data);
         }
+        [TestMethod]
+        public void TestMethod3()
+        {
+            LinkedList linkedList = new LinkedList();
+            linkedList.ChangeNode(56);
+            linkedList.ChangeNode(70);
+            linkedList.InsertElement(30, 2);
+            Assert.AreEqual(30, linkedList.head.next.data);
+        }
     }
 }
