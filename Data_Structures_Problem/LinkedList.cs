@@ -6,8 +6,20 @@ namespace Data_Structures_Problem
 {
     public class LinkedList
     {
-        internal Node head;
-        internal void AddNode(int data)
+        public Node head;
+        public void AddNode(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+                this.head = node;
+            else
+            {
+                Node temp = node;
+                temp.next = head;
+                head = temp;
+            }
+        }
+        public void ChangeNode(int data)
         {
             Node node = new Node(data);
             if (head == null)
