@@ -38,13 +38,26 @@ namespace Data_Structures_Problem
             if (this.head == null)
             {
                 Console.WriteLine("List is empty");
-                return;
             }
             Node temp = head;
             for (int i = 1; i < positionToInsert - 1; i++)
+            {
                 temp = temp.next;
+            }
             node.next = temp.next;
             temp.next = node;
+        }
+        public Node DeleteFirstElement()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("List is empty");
+                return null;
+            }
+            Node temp = this.head;
+            head = head.next;
+            temp.next = null;
+            return head;
         }
         internal void Display()
         {
