@@ -55,5 +55,15 @@ namespace DataStructuresTest
             Node last= linkedList.DeleteLastElement();
             Assert.AreEqual(30, last.data);
         }
+        [TestMethod]
+        public void TestMethod6()
+        {
+            LinkedList linkedList = new LinkedList();
+            linkedList.ChangeNode(56);
+            linkedList.ChangeNode(30);
+            linkedList.ChangeNode(70);
+            int position = linkedList.SearchList(30);
+            Assert.AreEqual(2, position);
+        }
     }
 }

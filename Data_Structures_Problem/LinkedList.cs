@@ -79,6 +79,25 @@ namespace Data_Structures_Problem
             temp.next = null;
             return temp;
         }
+        public int SearchList(int data)
+        {
+            int count = 1;
+            Node temp = head;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    return count; ;
+                }
+                temp = temp.next;
+                count++;
+            }
+            return 0;
+        }
         internal void Display()
         {
             if (this.head == null)

@@ -11,9 +11,16 @@ namespace Data_Structures_Problem
             linkedList.AddNode(70);
             linkedList.AddNode(56);
             linkedList.InsertElement(30, 2);
-            linkedList.DeleteLastElement();
             Console.WriteLine("Linked List is: ");
             linkedList.Display();
+            Console.WriteLine("\n");
+            Console.WriteLine("Enter the element to be searched");
+            int element = Convert.ToInt32(Console.ReadLine());
+            int position = linkedList.SearchList(element);
+            if(position==0)
+                Console.WriteLine("No such element found");
+            else
+                Console.WriteLine("Element found at position: "+position);
         }
     }
 }
