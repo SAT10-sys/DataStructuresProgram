@@ -98,6 +98,24 @@ namespace Data_Structures_Problem
             }
             return 0;
         }
+        public void InsertAfterElement(int element, int data)
+        {
+            int position = SearchList(data);
+            if (position == 0)
+            {
+                Console.WriteLine("No such element found");
+                return;
+            }
+            Node node = new Node(element);
+            Node temp = this.head;
+            for (int i = 1; i < position; i++)
+            {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+
+        }
         internal void Display()
         {
             if (this.head == null)
