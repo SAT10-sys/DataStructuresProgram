@@ -116,6 +116,37 @@ namespace Data_Structures_Problem
             temp.next = node;
 
         }
+        public void DeleteMiddleNode(int element)
+        {
+            int position = SearchList(element);
+            if (position == 0)
+            {
+                Console.WriteLine("No such element found");
+                return;
+            }
+            Node temp = head;
+            for (int i = 1; i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+
+        }
+        public int size()
+        {
+            int count = 0;
+            Node temp = head;
+            if (temp == null)
+            {
+                return 0;
+            }
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
         internal void Display()
         {
             if (this.head == null)

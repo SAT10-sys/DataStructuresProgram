@@ -76,5 +76,18 @@ namespace DataStructuresTest
             int position = linkedList.SearchList(40);
             Assert.AreEqual(3, position);
         }
+        [TestMethod]
+        public void TestMethod8()
+        {
+            LinkedList linkedList = new LinkedList();
+
+            linkedList.ChangeNode(56);
+            linkedList.ChangeNode(30);
+            linkedList.ChangeNode(70);
+            linkedList.InsertAfterElement(40, 30);
+            linkedList.DeleteMiddleNode(40);
+            int size = linkedList.size();
+            Assert.AreEqual(3, size);
+        }
     }
 }
