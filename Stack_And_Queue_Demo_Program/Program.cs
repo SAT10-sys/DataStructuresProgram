@@ -19,6 +19,12 @@ namespace Stack_And_Queue_Demo_Program
             stackOperation.Display();
             Console.WriteLine("\n");
             stackOperation.Peep();
+            QueueOperations queue = new QueueOperations();
+            queue.Enqueue(53);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            Console.WriteLine("Queue is: ");
+            queue.Display();
         }
     }
 }
