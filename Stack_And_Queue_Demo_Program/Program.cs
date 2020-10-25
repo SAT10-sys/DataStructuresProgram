@@ -25,6 +25,9 @@ namespace Stack_And_Queue_Demo_Program
             queue.Enqueue(70);
             Console.WriteLine("Queue is: ");
             queue.Display();
+            queue.Dequeue();
+            Console.WriteLine("After Dequeue operation: ");
+            queue.Display();
         }
     }
 }
