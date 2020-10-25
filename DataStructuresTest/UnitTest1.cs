@@ -39,12 +39,21 @@ namespace DataStructuresTest
         public void TestMethod4()
         {
             LinkedList linkedList = new LinkedList();
-
             linkedList.ChangeNode(56);
             linkedList.ChangeNode(30);
             linkedList.ChangeNode(70);
             Node head = linkedList.DeleteFirstElement();
             Assert.AreEqual(30, head.data);
+        }
+        [TestMethod]
+        public void TestMethod5()
+        {
+            LinkedList linkedList = new LinkedList();
+            linkedList.ChangeNode(56);
+            linkedList.ChangeNode(30);
+            linkedList.ChangeNode(70);
+            Node last= linkedList.DeleteLastElement();
+            Assert.AreEqual(30, last.data);
         }
     }
 }

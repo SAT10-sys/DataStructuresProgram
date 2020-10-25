@@ -59,6 +59,26 @@ namespace Data_Structures_Problem
             temp.next = null;
             return head;
         }
+        public Node DeleteLastElement()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("List is empty");
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                Console.WriteLine("List Only Has One Element");
+                return null;
+            }
+            Node temp = this.head;
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = null;
+            return temp;
+        }
         internal void Display()
         {
             if (this.head == null)

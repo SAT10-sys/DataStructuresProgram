@@ -11,7 +11,7 @@ namespace Data_Structures_Problem
             linkedList.AddNode(70);
             linkedList.AddNode(56);
             linkedList.InsertElement(30, 2);
-            linkedList.DeleteFirstElement();
+            linkedList.DeleteLastElement();
             Console.WriteLine("Linked List is: ");
             linkedList.Display();
         }
