@@ -89,5 +89,15 @@ namespace DataStructuresTest
             int size = linkedList.size();
             Assert.AreEqual(3, size);
         }
+        [TestMethod]
+        public void TestMethod9()
+        {
+            OrderedLinkedList orderedLinkedList = new OrderedLinkedList();
+            orderedLinkedList.AddElement(56);
+            orderedLinkedList.AddElement(30);
+            orderedLinkedList.AddElement(40);
+            orderedLinkedList.AddElement(70);
+            Assert.AreEqual(30, orderedLinkedList.head.data);
+        }
     }
 }

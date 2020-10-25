@@ -7,17 +7,12 @@ namespace Data_Structures_Problem
         static void Main(string[] args)
         {
             Console.WriteLine(" Welcome To Data Structures Problem ");
-            LinkedList linkedList = new LinkedList();
-            linkedList.AddNode(70);
-            linkedList.AddNode(56);
-            linkedList.InsertElement(30, 2);
-            linkedList.InsertAfterElement(40, 30);
-            linkedList.DeleteMiddleNode(40);
-            int size = linkedList.size();
-            Console.WriteLine("Size of list: "+size);
-            Console.WriteLine("Linked List is: ");
-            linkedList.Display();
-            Console.WriteLine("\n");
+            OrderedLinkedList orderedLinkedList = new OrderedLinkedList();
+            orderedLinkedList.AddElement(56);
+            orderedLinkedList.AddElement(30);
+            orderedLinkedList.AddElement(40);
+            orderedLinkedList.AddElement(70);
+            orderedLinkedList.Display();
         }
     }
 }
